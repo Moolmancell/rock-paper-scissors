@@ -1,0 +1,132 @@
+body {
+    background-color: #272727;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.main-menu  {
+    text-align: center;
+    padding: 18rem 0;
+    color: white;
+}
+
+button.menu {
+    margin-top: 20px;
+    width: 300px;
+    font-size: medium;
+    border: 2px solid black;
+    transition: filter .5s;
+} 
+.main-menu.disappear {
+    animation: disappear 1s forwards;
+}
+@keyframes disappear{
+    from {filter: opacity(100%);}
+    to {filter: opacity(0%);}
+}
+
+button.menu:hover {
+    filter: invert();
+}
+
+h1.menu {
+    margin-bottom: 20px;
+}
+/* Game */
+@keyframes playerAnim {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(20deg);}
+}
+@keyframes comAnim {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-20deg);}
+}
+/*Animations*/
+.playerAnim {
+    animation-name: playerAnim;
+    animation-duration: .5s;
+    animation-iteration-count: 5;
+    animation-direction: alternate-reverse;
+}
+
+.comAnim {
+    animation-name: comAnim;
+    animation-duration: .5s;
+    animation-iteration-count: 5;
+    animation-direction: alternate-reverse;
+}
+/*-----------*/
+
+
+button.UI {
+    display: inline;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-right: 20px;
+    font-weight: bold;
+    padding: 30px;
+}
+
+img.playerhand {
+    width: min(25vw, 300px);
+    height: auto;
+    transform-origin: center left;
+}
+
+img.comhand {
+    width: min(25vw, 300px);;
+    height: auto;
+    transform-origin: center right;
+}
+
+#section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonSelection {
+    text-align: center;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 75vw;
+    color: white;
+    font-size: max(3vw, 15px);
+    margin-bottom: 100px;
+}
+
+.buttonSelection img {
+    width: min(5vw, 200px);
+    height: auto;
+}
+
+.buttonSelection .UI {
+    width: min(15vw,200px);
+    height: min(15vw,200px);
+    transition: filter 0.5s;
+}
+
+.buttonSelection .UI:hover {
+    filter: invert();
+}
+
+.tryAgainButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    font-size: max(1vw, 10px);
+    padding: 10px;
+    transition: filter 0.5s;
+}
+.tryAgainButton:hover {
+    filter: invert();
+}
