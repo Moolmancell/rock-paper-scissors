@@ -57,9 +57,9 @@ function loadGameUi() {
     scoreSection.appendChild(score_p)
     scoreSection.appendChild(score_c)
     /*Hand Pics*/
-    playerPic.setAttribute("src", "/images/PlayerRock.png")
+    playerPic.setAttribute("src", "images/PlayerRock.png")
     playerSection.appendChild(playerPic)
-    comPic.setAttribute("src", "/images/Com_rock.png")
+    comPic.setAttribute("src", "images/Com_rock.png")
     comSection.appendChild(comPic)
     /*buttons*/  
     spawnButtons()
